@@ -9,13 +9,13 @@
 <meta property="og:description" content="GenAI, agents and LLMOps for healthcare: RAG assistants, LangGraph agents, MCP, LLM evaluation and predictive ML on AWS.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://abhi356213.github.io/">
-<meta property="og:image" content="https://abhi356213.github.io/assets/share-card.png">
+<meta property="og:image" content="https://abhi356213.github.io/share-card.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="627">
 <meta property="og:image:alt" content="Abhishek Pragada, AI/ML Engineer, Healthcare AI">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://abhi356213.github.io/">
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#F2F7F8">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -443,8 +443,8 @@ html.motion .rv.in{opacity:1;transform:none}
       <div class="walker" id="walker">
         <div class="bob" id="bob">
           <picture>
-            <source srcset="assets/abhi.webp" type="image/webp">
-            <img class="portrait" id="portrait" src="assets/abhi.png" alt="" width="519" height="1343" fetchpriority="high">
+            <source srcset="abhi.webp" type="image/webp">
+            <img class="portrait" id="portrait" src="abhi.png" alt="" width="519" height="1343" fetchpriority="high">
           </picture>
         </div>
       </div>
@@ -463,7 +463,7 @@ html.motion .rv.in{opacity:1;transform:none}
       <div class="shot rv">
         <svg class="ring" viewBox="0 0 200 200" aria-hidden="true"><defs><path id="ringpath" d="M100,100 m-91,0 a91,91 0 1,1 182,0 a91,91 0 1,1 -182,0"/></defs><circle cx="100" cy="100" r="82"/>
           <text><textPath href="#ringpath">AI/ML Engineer <tspan class="rd">●</tspan> Healthcare AI <tspan class="rd">●</tspan> Agentic systems <tspan class="rd">●</tspan> Predictive ML <tspan class="rd">●</tspan></textPath></text></svg>
-        <img src="assets/headshot.webp" alt="Abhishek Pragada" width="720" height="720" loading="lazy">
+        <img src="headshot.webp" alt="Abhishek Pragada" width="720" height="720" loading="lazy">
         <span class="tag mono">7+ yrs</span>
       </div>
       <div class="cards rv">
@@ -571,12 +571,12 @@ const PROFILE = {
   email: 'abhi356213@gmail.com',
   linkedin: 'https://www.linkedin.com/in/abhishek-p-aba216319/',
   github: '',     // e.g. 'https://github.com/your-handle'
-  resume: '',     // e.g. 'assets/Abhishek_Pragada_Resume.pdf'
-  introAudio: 'assets/intro-voice.mp3', // your voice (also baked into the intro video)
-  bgm: 'assets/bgm.mp3',                 // background music, plays only with sound on
+  resume: '',     // e.g. 'Abhishek_Pragada_Resume.pdf'
+  introAudio: 'intro-voice.mp3', // your voice (also baked into the intro video)
+  bgm: 'bgm.mp3',                 // background music, plays only with sound on
   projectAudio: false,
-  heroVideo: 'assets/intro.mp4',
-  heroPoster: 'assets/intro-poster.webp',
+  heroVideo: 'intro.mp4',
+  heroPoster: 'intro-poster.webp',
   voiceAt: 4.833,                        // second in the intro video where the talking clip (and your voice) begins
   perch: {x: 575, y: 395},               // where Bit lands (your left shoulder), in clip pixels 720 x 1280
   floorX: 600
@@ -598,37 +598,37 @@ const PROJECTS = [
  {slug:'rag-assistants',cat:'Generative AI · RAG',name:'RAG Assistants for Clinic Staff',
   short:'Shared retrieval pipeline behind three clinic-staff assistants, with hybrid search and checked citations.',
   desc:'One shared retrieval pipeline behind three staff assistants for policy, billing and coding, and onboarding. One Qdrant collection per assistant over 1,200 documents, Claude on Amazon Bedrock, and hybrid search added after staff testing showed dense retrieval missed exact CPT and ICD-10 codes. Assistants decline when context is thin, and every citation is matched to its source before an answer reaches staff.',
-  tags:['Qdrant','Sentence Transformers','BM25','Cross-encoder','Bedrock','FastAPI','ECS Fargate'],metric:['1,200','documents across 3 assistants'],audio:'assets/project-rag.mp3',
+  tags:['Qdrant','Sentence Transformers','BM25','Cross-encoder','Bedrock','FastAPI','ECS Fargate'],metric:['1,200','documents across 3 assistants'],audio:'project-rag.mp3',
   steps:[['Ingest','EventBridge and SQS ingestion; content hashing re-embeds only new or changed documents, and approval metadata keeps outdated files out.'],['Hybrid retrieve','BM25 keyword search and dense vectors merged with reciprocal rank fusion.'],['Rerank','A cross-encoder reorders the candidates so exact billing terms surface first.'],['Grounded answer','Claude on Bedrock answers from the passages; citations are checked against source metadata.']],
   speech:'My RAG project is one shared pipeline behind three staff assistants for policy, billing and coding, and onboarding. It searches twelve hundred documents with hybrid retrieval, BM25 plus dense vectors with a cross-encoder reranker, because dense search alone was missing exact billing codes. Claude on Amazon Bedrock writes the answer, and every citation is checked against its source.'},
  {slug:'embedding-finetune',cat:'Retrieval · Fine-tuning',name:'Fine-Tuned Retrieval Model',
   short:'Open-source embedding model fine-tuned on 10K synthetic pairs and shadow-tested before launch.',
   desc:'Fine-tuned an open-source Sentence Transformers embedding model in PyTorch on SageMaker, using 10K synthetic question and passage pairs generated with Claude. Measured on 350 held-out staff questions, then shadow-tested on live queries before production switched over.',
-  tags:['PyTorch','SageMaker','Sentence Transformers','Synthetic data','Claude'],metric:['58 → 68%','Recall@5 on 350 held-out questions'],audio:'assets/project-finetune.mp3',
+  tags:['PyTorch','SageMaker','Sentence Transformers','Synthetic data','Claude'],metric:['58 → 68%','Recall@5 on 350 held-out questions'],audio:'project-finetune.mp3',
   steps:[['Synthetic pairs','Claude generates 10K question and passage pairs from real documents.'],['Fine-tune','The open-source embedding model is trained in PyTorch on SageMaker.'],['Evaluate','Recall@5 on 350 held-out staff questions: 58% before, 68% after.'],['Shadow test','The new model runs silently on live queries before production switches over.']],
   speech:'I fine-tuned an open source embedding model on ten thousand synthetic question and passage pairs that Claude generated. Recall at five went from fifty eight to sixty eight percent on three hundred fifty held out staff questions, and I shadow tested it on live traffic before switching production over.'},
  {slug:'agents-mcp',cat:'Agentic AI · MCP',name:'LangGraph Agents & MCP Server',
   short:'Agents with a FastMCP tool layer, audit logs and human approval on every write action.',
   desc:'Requests that need internal lookups route to policy, billing or onboarding agents. Claude chooses the tools, while plain Python handles authorization, retries and fallbacks. A FastMCP server exposes seven approved tools with Pydantic validation, separates read-only from write tools, and logs every call. Write actions such as drafted patient outreach pause for staff approval.',
-  tags:['LangGraph','FastMCP','Pydantic','Terraform','IAM','Secrets Manager'],metric:['7','approved tools, human approval on every write'],audio:'assets/project-agents.mp3',
+  tags:['LangGraph','FastMCP','Pydantic','Terraform','IAM','Secrets Manager'],metric:['7','approved tools, human approval on every write'],audio:'project-agents.mp3',
   steps:[['Route','LangGraph sends each request to the policy, billing or onboarding agent.'],['MCP tools','Seven approved tools; Pydantic validates every input before it reaches a backend.'],['Human approval','LangGraph interrupts pause write actions until authorized staff approve, edit or reject.'],['Audit','Authorization checks and audit logs on every call; least-privilege IAM keeps credentials away from the model.']],
   speech:'For agentic workflows, LangGraph routes each request to a policy, billing, or onboarding agent. A FastMCP server exposes seven approved tools with strict validation, and any action that changes data pauses until a staff member approves it. The model never sees backend credentials.'},
  {slug:'llm-evals',cat:'LLMOps · Evaluation',name:'LLM Evaluation & Release Gates',
   short:'Golden dataset, LLM judge and red-team tests gating every pull request and release.',
   desc:'A versioned golden dataset covering retrieval, tool use, refusals and multi-step workflows. Deterministic checks verify tools, citations and blocked actions; an LLM judge scores groundedness and relevance. Every pull request runs Pytest and a quick regression eval, and each release runs the full set plus red-team tests for prompt injection, PHI exposure and unauthorized actions.',
-  tags:['Golden datasets','LLM-as-a-judge','GitHub Actions','Pytest','OpenTelemetry','X-Ray'],metric:['Every PR','gated by a regression eval'],audio:'assets/project-evals.mp3',
+  tags:['Golden datasets','LLM-as-a-judge','GitHub Actions','Pytest','OpenTelemetry','X-Ray'],metric:['Every PR','gated by a regression eval'],audio:'project-evals.mp3',
   steps:[['Golden set','Versioned cases for retrieval, tool use, refusals and multi-step flows, fed by weekly reviews of staff feedback.'],['Checks + judge','Deterministic checks for tools and citations; an LLM judge for groundedness and relevance.'],['CI gate','GitHub Actions runs Pytest and a quick eval on every pull request; red-team tests before each release.'],['Trace','OpenTelemetry through X-Ray and CloudWatch follows each step of retrieval, model and tool calls.']],
   speech:'I treat evaluation as part of the product. A versioned golden dataset covers retrieval, tool use, refusals and multi step workflows. Every pull request runs a quick regression eval, and each release runs the full set plus red team tests for prompt injection and PHI exposure.'},
  {slug:'no-show',cat:'Predictive ML',name:'Patient No-Show Prediction',
   short:'XGBoost on pre-visit features, scored weekly so outreach calls the highest-risk patients first.',
   desc:'An end-to-end XGBoost model trained only on features known before each visit, validated on later time periods, versioned in MLflow and scored weekly through Airflow on about 5K upcoming appointments so outreach staff call the highest-risk patients first.',
-  tags:['XGBoost','MLflow','Airflow','Redshift','Python'],metric:['0.80','ROC-AUC on time-based validation'],audio:'assets/project-noshow.mp3',
+  tags:['XGBoost','MLflow','Airflow','Redshift','Python'],metric:['0.80','ROC-AUC on time-based validation'],audio:'project-noshow.mp3',
   steps:[['Visits','eClinicalWorks data lands in Redshift through daily Airflow pipelines.'],['Features','Only information available before the visit, to avoid leakage.'],['XGBoost','A classifier estimates each appointment’s no-show risk, tracked in MLflow.'],['Outreach','Weekly scores on about 5K appointments tell staff who to call first.']],
   speech:'This model predicts appointment no-show risk with XGBoost, using only features known before the visit. It reaches point eight zero ROC AUC on time based validation, and scores about five thousand upcoming appointments every week so outreach staff call the highest risk patients first.'},
  {slug:'claims-forecast',cat:'Forecasting · Segmentation',name:'Claims Cost Forecasting',
   short:'Six-to-twelve-month claims-cost forecasts for finance, plus K-Means member segments.',
   desc:'Monthly claims-cost forecasts six to twelve months ahead for inpatient, outpatient, professional and pharmacy spend at Blue Cross Blue Shield of North Carolina, comparing ARIMA, exponential smoothing and regression in rolling backtests. Members were also segmented with K-Means into four interpretable groups, including a high-cost cluster flagged for review.',
-  tags:['Python','ARIMA','Exponential smoothing','K-Means','Snowflake'],metric:['8.5%','average six-month MAPE'],audio:'assets/project-forecasting.mp3',
+  tags:['Python','ARIMA','Exponential smoothing','K-Means','Snowflake'],metric:['8.5%','average six-month MAPE'],audio:'project-forecasting.mp3',
   steps:[['Claims','Monthly claims by category, joined with provider data in Snowflake.'],['Backtest','ARIMA, exponential smoothing and regression compared on rolling windows.'],['Forecast','Six to twelve months ahead, 8.5% average six-month MAPE.'],['Planning','Delivered to finance for budgeting and strategic planning.']],
   speech:'At Blue Cross Blue Shield of North Carolina I forecast monthly claims costs six to twelve months ahead across four categories, comparing ARIMA, exponential smoothing and regression in rolling backtests. The forecasts averaged eight and a half percent error at six months and went to finance for budgeting.'}
 ];
